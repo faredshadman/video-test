@@ -1,17 +1,30 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <button @click="handleVideo">Show video modal</button>
+  <VideoPlayer v-show="video" />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { ref } from "@vue/reactivity";
+import VideoPlayer from "./components/VideoPlayer.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    VideoPlayer,
+  },
+  setup() {
+    const video = ref(false);
+    const handleVideo = () => {
+      video.value = !video.value;
+      console.log(video);
+    };
+
+    return {
+      video,
+      handleVideo,
+    };
+  },
+};
 </script>
 
 <style>
