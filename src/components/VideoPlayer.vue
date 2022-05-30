@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Video</h1>
+    <h1>xezer : BETA_CHAMPION_35 (27-05-2022 11:46:20)</h1>
     <video controls>
       <source
         @play="play"
@@ -23,7 +23,7 @@ div {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: white;
+  background: black;
   height: 400px;
   width: 600px;
 }
