@@ -1,9 +1,10 @@
 <template>
   <div>
+    <h1>Video</h1>
     <video controls>
       <source
         @play="play"
-        src="http://173.212.238.58:8082/videos/atv-2022-01-30-07-01-04_BETA_CHAMPION_35-2022-01-30-07-40-47.mp4"
+        :src="require('@/assets/video.mp4')"
         type="video/mp4"
       />
     </video>
@@ -22,7 +23,7 @@ div {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: red;
+  background: white;
   height: 400px;
   width: 600px;
 }
